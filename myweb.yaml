@@ -23,7 +23,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: justmeandopensource/myweb:<TAG>
+      - image: allwenn/myweb:<TAG>
         imagePullPolicy: Always
         name: myweb
 
@@ -37,8 +37,8 @@ metadata:
   namespace: pipeline-demo
 spec:
   ports:
-  - nodePort: 32223
-    port: 80
+  - nodePort: 30000
+    port: 9095
     protocol: TCP
     targetPort: 80
   selector:
